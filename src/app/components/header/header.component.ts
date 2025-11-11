@@ -36,7 +36,10 @@ export class HeaderComponent {
 
   // close menu on escape for accessibility
   @HostListener('document:keydown.escape', ['$event'])
-  onEscape(event: KeyboardEvent) {
-    if (this.menuOpen) this.closeMenu();
+  onEscape(event: Event) {
+    const e = event as KeyboardEvent;
+    if (this.menuOpen && e.key === 'Escape') {
+      this.closeMenu();
+    }
   }
 }
