@@ -1,1 +1,42 @@
-<p>header works!</p>
+<header class="site-header" [class.scrolled]="isScrolled" role="banner">
+  <div class="container header-inner">
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Rajat Kumar — Home">
+      <!-- Inline SVG logo (replace or swap with image) -->
+      <svg class="logo" width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10" fill="#0b74de"></circle>
+        <text x="12" y="16" text-anchor="middle" font-size="11" font-family="Arial" fill="#fff">RK</text>
+      </svg>
+      <span class="brand-text">Rajat Kumar</span>
+    </a>
+
+    <button
+      class="burger"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="primary-navigation"
+      aria-label="Toggle navigation"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <nav
+      id="primary-navigation"
+      class="nav"
+      [class.open]="menuOpen"
+      role="navigation"
+      aria-label="Primary"
+    >
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li><a routerLink="/blogs" routerLinkActive="active">Blogs</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
