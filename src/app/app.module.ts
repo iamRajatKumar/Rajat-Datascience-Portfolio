@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import {NgParticlesModule} from "ng-particles";
+import { IntroductionComponent } from './components/introduction/introduction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,
