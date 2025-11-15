@@ -1,15 +1,49 @@
-<section class="introduction-hero">
-  <!-- tsParticles canvas -->
-  <div id="tsparticles" #tsparticles class="particles-canvas"></div>
+<section class="introduction-hero" aria-labelledby="intro-heading">
+  <!-- tsParticles canvas (background) -->
+  <div
+    id="tsparticles"
+    #tsparticles
+    class="particles-canvas">
+  </div>
 
-  <!-- Your content -->
-  <div class="intro-content">
-    <h1>Hi, I'm Rajat Kumar</h1>
-    <p>Full-Stack Developer · Angular · Spring Boot</p>
+  <!-- CONTENT ON TOP -->
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1 id="intro-heading" class="hero-title">
+        Hi, I'm <span class="name">Rajat Kumar</span>
+      </h1>
 
-    <button class="intro-cta">
-      View Portfolio
-    </button>
+      <h3 class="hero-subtitle">
+        Data Scientist — Machine Learning &amp; MLOps
+      </h3>
+
+      <p class="hero-desc">
+        I’m Rajat Kumar, a passionate <strong>Full Stack Developer</strong> transitioning into
+        <strong>Data Science</strong>. I build scalable web applications using
+        <strong>Angular, React, Spring Boot, and AWS</strong>, and I’m now expanding my expertise
+        into <strong>Python, Machine Learning, and AI</strong> to solve real-world data problems.
+      </p>
+
+      <!-- <div class="hero-ctas" role="group" aria-label="Primary actions">
+        <button
+          class="btn primary"
+          (click)="downloadResume()"
+          aria-label="Download resume">
+          ⬇ Resume
+        </button>
+        <a
+          routerLink="/contact"
+          class="btn ghost"
+          aria-label="Contact Rajat">
+          Contact
+        </a>
+      </div> -->
+    </div>
+
+    <div class="hero-right" aria-hidden="false">
+      <div class="photo-frame" role="img" aria-label="Photo of Rajat Kumar">
+        <img src="assets/images/rajat-profile.png" alt="Rajat Kumar" />
+      </div>
+    </div>
   </div>
 </section>
-

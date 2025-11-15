@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild,} from '@angular/core';
 
 import { tsParticles } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
@@ -84,4 +79,15 @@ export class IntroductionComponent implements AfterViewInit {
       },
     });
   }
+
+    // Resume download: make sure /assets/resume.pdf exists
+  // downloadResume(): void {
+  //   const link = document.createElement('a');
+  //   link.href = '/assets/resume.pdf';
+  //   link.download = 'Rajat_Kumar_Resume.pdf';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   link.remove();
+  // }
 }
+
