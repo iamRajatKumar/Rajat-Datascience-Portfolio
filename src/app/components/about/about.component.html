@@ -1,1 +1,75 @@
-<p>about works!</p>
+<section class="about" aria-labelledby="about-heading">
+  <div class="about-container">
+    <!-- Heading -->
+    <header class="about-header">
+      <h1 id="about-heading">Rajat in a Nutshell</h1>
+      <p class="subtitle">
+        Full-Stack Developer turning Data Scientist — blending engineering, analytics, and storytelling.
+      </p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- Main content -->
+    <div class="about-main">
+      <!-- Left: Photo -->
+      <div class="about-photo">
+        <div class="photo-frame" role="img" aria-label="Photo of Rajat Kumar">
+          <img src="assets/images/rajat-about.jpg" alt="Rajat Kumar" />
+        </div>
+      </div>
+
+      <!-- Right: Story + lists -->
+      <div class="about-text">
+        <p>
+          I’m <strong>Rajat Kumar</strong>, a software engineer who loves building things that actually get used.
+          For the past few years, I’ve been working as a <strong>Full-Stack Developer</strong>, crafting web
+          applications with <strong>Angular, React, Spring Boot, Microservices, and AWS</strong>. I enjoy taking
+          ideas from a rough sketch to a production-ready system — clean APIs, reliable services, and polished UIs.
+        </p>
+
+        <p>
+          Over time, I realised that the products I’m most proud of all have one thing in common:
+          they help people make better decisions with <strong>data</strong>. That’s what pushed me toward
+          <strong>Data Science &amp; Machine Learning</strong>. Now I’m intentionally transitioning — learning
+          <strong>Python, statistics, ML, and MLOps</strong>, and building end-to-end projects that go beyond
+          models to solve real business problems.
+        </p>
+
+        <p>
+          Most of my learning happens outside “formal” classrooms. I experiment with datasets, follow online
+          courses, read blogs, and implement what I learn in side projects. I enjoy turning these projects into
+          <strong>blog posts and tutorials</strong> so others can reuse my code, learn faster, and avoid the
+          mistakes I made along the way.
+        </p>
+
+        <p>
+          In the long run, I want to sit at the intersection of <strong>engineering, analytics, and product</strong> —
+          building systems that are not just technically solid, but also explainable, ethical, and useful to the
+          people who rely on them.
+        </p>
+
+        <!-- Quick facts -->
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Snapshot</h3>
+            <ul>
+              <li *ngFor="let item of highlights">{{ item }}</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>What I’m Learning</h3>
+            <ul>
+              <li *ngFor="let item of learning">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="closing">
+          If you’re working on something interesting in <strong>data science, ML, or full-stack development</strong>,
+          I’d love to connect, collaborate, or just exchange ideas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
