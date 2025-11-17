@@ -1,6 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +6,12 @@ import { filter } from 'rxjs/operators';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-
 export class HeaderComponent {
+
   menuOpen = false;
   isScrolled = false;
 
-  constructor(private router: Router) {
-    // Close menu on navigation
-    this.router.events.pipe(
-      filter(e => e instanceof NavigationEnd)
-    ).subscribe(() => this.menuOpen = false);
-  }
+  constructor() {}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -28,17 +21,34 @@ export class HeaderComponent {
     this.menuOpen = false;
   }
 
-  // Add a small shadow when user scrolls down
+  // Smooth scroll to selected section
+  scrollToSection(id: string) {
+    this.closeMenu(); // close mobile menu
+
+    const element = document.getElementById(id);
+    if (element) {
+      // Offset for fixed header
+      const headerOffset = 80; // adjust if needed
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  // Header shadow on scroll
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 10;
   }
 
-  // close menu on escape for accessibility
+  // ESC closes menu (accessibility)
   @HostListener('document:keydown.escape', ['$event'])
   onEscape(event: Event) {
-    const e = event as KeyboardEvent;
-    if (this.menuOpen && e.key === 'Escape') {
+    if (this.menuOpen) {
       this.closeMenu();
     }
   }
