@@ -70,10 +70,11 @@ $bg-light: #f9fafb;
 .about-photo {
   display: flex;
   justify-content: center;
+  margin-top: 50%;
 }
 
 .photo-frame {
-  width: 260px;
+  width: 500px;
   max-width: 100%;
   border-radius: 18px;
   overflow: hidden;
@@ -142,4 +143,9 @@ $bg-light: #f9fafb;
       margin-bottom: 0.25rem;
     }
   }
+}
+
+.about strong {
+  color: #080076 !important;
+  font-weight: 700;
 }
