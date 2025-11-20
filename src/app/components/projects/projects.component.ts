@@ -12,7 +12,7 @@ export class ProjectsComponent {
   {
     title: 'AI Stock Market Predictor',
     desc: 'A Machine Learning model that predicts stock movements using historical trends and sentiment analysis.',
-    img: 'assets/images/project1.png',
+    img: 'assets/images/project2.png',
     demo: '#',
     github: '#'
   },
