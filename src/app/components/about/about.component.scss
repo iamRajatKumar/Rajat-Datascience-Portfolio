@@ -1,31 +1,33 @@
-$accent: #1d4ed8;
+/* responsive About section - replace about.component.scss with this */
+
+/* variables */
+$accent: #38bdf8;
 $text-main: #1f2937;
 $text-muted: #4b5563;
 $bg-light: #f9fafb;
 
-#about, section.about {
+/* apply to section with class "about" */
+section.about {
   position: relative;
-  z-index: 3;              /* put the about content above particle canvas */
-  background: #ffffff;     /* white background so text is visible */
-  padding: 4rem 1.5rem;    /* spacing */
+  z-index: 3;
+  background: #ffffff;
+  padding: 3.5rem 1.5rem;
   box-sizing: border-box;
-  color: #1f2937;          /* dark text for readability */
+  color: $text-main;
 }
 
-/* also ensure the inner container is visible */
+/* container */
 .about-container {
-  position: relative;
-  z-index: 4;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 4;
 }
 
-
-/* Header */
-
+/* header */
 .about-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 
   h1 {
     font-size: clamp(2rem, 4vw, 2.6rem);
@@ -34,7 +36,7 @@ $bg-light: #f9fafb;
   }
 
   .subtitle {
-    margin-top: 0.75rem;
+    margin-top: 0.6rem;
     max-width: 48rem;
     margin-left: auto;
     margin-right: auto;
@@ -43,109 +45,161 @@ $bg-light: #f9fafb;
   }
 
   .divider {
-    width: 250px;
+    width: 180px; /* smaller so it doesn't push layout */
     height: 3px;
     border-radius: 999px;
     background: $accent;
-    margin: 1.5rem auto 0;
+    margin: 1.25rem auto 0;
   }
 }
 
-/* Layout */
-
+/* main content: two-column grid on desktop, single column on smaller screens */
 .about-main {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
-  gap: 2.5rem;
-  align-items: flex-start;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
+  grid-template-columns: 1fr 1.15fr; /* image slightly narrower */
+  gap: 2rem;
+  align-items: start;
 }
 
-/* Photo */
-
+/* LEFT: photo column */
 .about-photo {
   display: flex;
   justify-content: center;
-  margin-top: 50%;
+  align-items: flex-start;
+  margin: 0; /* removed the 50% margin that caused layout to vanish */
 }
 
+/* photo frame */
 .photo-frame {
-  width: 500px;
-  max-width: 100%;
-  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;   /* keep photo area reasonable on large screens */
+  border-radius: 14px;
   overflow: hidden;
-  background: white;
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.25);
-  border: 4px solid rgba(148, 163, 184, 0.4);
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
+  background: #fff;
+  border: 6px solid rgba(148, 163, 184, 0.08);
+  box-shadow: 0 20px 40px rgba(11, 20, 34, 0.06);
+  padding: 0.5rem;
+  /* If you want the image to stick while the user scrolls on desktop, uncomment:
+     position: sticky;
+     top: 120px;
+  */
 }
 
-/* Text & cards */
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* preserves image proportions, no cropping */
+  border-radius: 10px;
+  background: #fcfcfc;
+}
 
+/* RIGHT: text + small cards */
 .about-text {
   color: $text-main;
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.68;
 
   p {
     margin-bottom: 1rem;
   }
 
   .closing {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
     font-style: italic;
     color: $text-muted;
   }
 }
 
+/* small info cards grid */
 .about-grid {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.about-card {
-  background: $bg-light;
-  border-radius: 12px;
-  padding: 1rem 1.2rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-
-  h3 {
-    margin: 0 0 0.5rem;
-    font-size: 0.98rem;
-    font-weight: 600;
-    color: $accent;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr; /* stack cards on narrow screens */
   }
 
-  ul {
-    margin: 0;
-    padding-left: 1.1rem;
-    list-style: disc;
+  .about-card {
+    background: $bg-light;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 10px 24px rgba(2,6,23,0.04);
 
-    li {
-      font-size: 0.9rem;
-      color: $text-muted;
-      margin-bottom: 0.25rem;
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: $accent;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      list-style: disc;
+      li {
+        font-size: 0.95rem;
+        color: $text-muted;
+        margin-bottom: 0.35rem;
+      }
     }
   }
 }
 
+/* Strong colored to accent (keeps earlier request) */
 .about strong {
-  color: #080076 !important;
+  color: $accent !important;
   font-weight: 700;
+}
+
+/* ------------------
+   RESPONSIVE BREAKPOINTS
+   ------------------ */
+
+/* tablet / narrower desktops: stack image on top of text */
+@media (max-width: 1100px) {
+  .about-main {
+    grid-template-columns: 1fr; /* single column: image then text */
+  }
+
+  .photo-frame {
+    max-width: 360px;
+    margin: 0 auto 1rem; /* center the image */
+  }
+
+  .about-text {
+    font-size: 0.98rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  section.about {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .photo-frame {
+    max-width: 280px;
+    padding: 0.35rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .about-grid {
+    gap: 0.85rem;
+  }
+
+  .about-card {
+    padding: 0.85rem;
+  }
 }
