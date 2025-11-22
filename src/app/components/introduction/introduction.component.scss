@@ -6,7 +6,7 @@ $text-muted: #9ca3af;
 /* SECTION */
 .introduction-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh;   // full height on large screens
   overflow: hidden;
 }
 
@@ -133,12 +133,22 @@ $text-muted: #9ca3af;
   }
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet / small desktop */
 @media (max-width: 992px) {
+  .introduction-hero {
+    min-height: auto;          // <-- no more forced huge height
+    padding-bottom: 2rem;      // small extra breathing room
+  }
+
   .hero-inner {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 5rem 1.5rem 3rem;
+    padding: 4rem 1.5rem 2.5rem;
+    gap: 1.5rem;
   }
 
   .hero-left {
@@ -152,16 +162,29 @@ $text-muted: #9ca3af;
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
+  .introduction-hero {
+    min-height: auto;          // keep auto on phones
+    padding-bottom: 1.5rem;
+  }
+
   .hero-inner {
-    padding-top: 4rem;
+    padding: 3rem 1rem 1.75rem;
+    gap: 1.25rem;
   }
 
   .hero-left .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .hero-left .hero-desc {
+    max-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .hero-right .photo-frame {
-    width: 220px;
+    width: 210px;
+    border-width: 5px;
   }
 }
