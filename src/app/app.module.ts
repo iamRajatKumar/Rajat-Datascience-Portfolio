@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { CertificatesComponent } from './components/certificates/certificates.component';
 
 
 
@@ -16,7 +17,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     HeaderComponent,
     IntroductionComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CertificatesComponent
   ],
   imports: [
     BrowserModule,
