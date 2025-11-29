@@ -20,6 +20,15 @@ export class CertificatesComponent {
       downloadName: 'CampusX_DataScience_Certificate.pdf'
     },
     {
+      title: 'Generative AI foundational Certificate',
+      provider: 'Upgrad',
+      date: '2025',
+      description: 'Course on Agile principles, Scrum, and teamwork best practices.',
+      image: 'assets/certs/agile-fundamentals.png',
+      file: 'assets/certs/agile-fundamentals.pdf',
+      downloadName: 'Agile_Fundamentals_Certificate.pdf'
+    },
+    {
       title: 'AWS Cloud Practitioner',
       provider: 'Amazon Web Services',
       date: '2025',
@@ -38,15 +47,6 @@ export class CertificatesComponent {
       viewUrl: 'https://example.com/microsoft-java', // optional
       file: 'assets/certs/microsoft-java.pdf',
       downloadName: 'Microsoft_Java_Certificate.pdf'
-    },
-    {
-      title: 'Agile Fundamentals',
-      provider: 'Coursera / Other',
-      date: '2023',
-      description: 'Course on Agile principles, Scrum, and teamwork best practices.',
-      image: 'assets/certs/agile-fundamentals.png',
-      file: 'assets/certs/agile-fundamentals.pdf',
-      downloadName: 'Agile_Fundamentals_Certificate.pdf'
     },
     {
       title: 'Agile Fundamentals',
