@@ -1,12 +1,12 @@
 <section class="projects-bg-test" aria-labelledby="projects-bg-heading">
-<div>
-  <div class="projects-header">
-    <h1 id="projects-heading">Projects</h1>
-    <p class="subtitle">
-      A collection of things I’ve built — combining engineering, data, and creativity.
-    </p>
-    <div class="divider"></div>
-  </div>
+  <div>
+    <div class="projects-header">
+      <h1 id="projects-heading">Projects</h1>
+      <p class="subtitle">
+        A collection of things I’ve built — combining engineering, data, and creativity.
+      </p>
+      <div class="divider"></div>
+    </div>
 
     <div class="projects-grid">
       <div class="project-card" *ngFor="let p of projects">
@@ -14,10 +14,15 @@
         <h3>{{ p.title }}</h3>
         <p>{{ p.desc }}</p>
         <div class="card-links">
-          <a [href]="p.demo">🔗 Live Demo</a>
-          <a [href]="p.github">📦 GitHub</a>
+          <a class="btn-icon" [href]="p.demo" target="_blank">
+            <span class="material-icons">language</span> Live Demo
+          </a>
+
+          <a class="btn-icon" [href]="p.github" target="_blank">
+            <span class="material-icons">code</span> GitHub
+          </a>
         </div>
       </div>
     </div>
-</div>  
+  </div>
 </section>
