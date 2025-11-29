@@ -1,1 +1,37 @@
-<p>certificates works!</p>
+<section class="certificates-section" id="certificates" aria-labelledby="certificates-heading">
+  <div class="certificates-container">
+    <header class="certificates-header">
+      <h2 id="certificates-heading">Certificates</h2>
+      <p class="subtitle">Selected certifications and course completions that showcase my learning and skills.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="certificates-grid" role="list">
+      <article
+        class="cert-card"
+        role="listitem"
+        *ngFor="let c of certificates"
+        [attr.data-provider]="c.provider"
+      >
+        <div class="cert-img" aria-hidden="true">
+          <img [src]="c.image" [alt]="c.title + ' certificate image'"/>
+        </div>
+
+        <div class="cert-body">
+          <h3 class="cert-title">{{ c.title }}</h3>
+          <p class="cert-meta">
+            <strong>{{ c.provider }}</strong>
+            <span class="cert-date" *ngIf="c.date"> • {{ c.date }}</span>
+          </p>
+
+          <p class="cert-desc" *ngIf="c.description">{{ c.description }}</p>
+
+          <div class="cert-actions">
+            <a class="btn-link" *ngIf="c.viewUrl" [href]="c.viewUrl" target="_blank" rel="noopener noreferrer">View</a>
+            <button class="btn-link" *ngIf="c.file" (click)="downloadCert(c.file, c.downloadName)">Download</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
