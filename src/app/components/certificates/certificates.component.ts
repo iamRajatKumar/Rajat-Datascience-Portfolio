@@ -23,10 +23,10 @@ export class CertificatesComponent {
       title: 'Generative AI foundational Certificate',
       provider: 'Upgrad',
       date: '2025',
-      description: 'Course on Agile principles, Scrum, and teamwork best practices.',
-      image: 'assets/certs/agile-fundamentals.png',
-      file: 'assets/certs/agile-fundamentals.pdf',
-      downloadName: 'Agile_Fundamentals_Certificate.pdf'
+      description: 'Introduction to Generative AI, Advanced prompt engineering techniques, Solve Framework.',
+      image: 'assets/certs/genAI-fundamentals.png',
+      file: 'assets/certs/genAI-fundamentals.pdf',
+      downloadName: 'Generative_AI_Foundational_Certificate.pdf'
     },
     {
       title: 'AWS Cloud Practitioner',
