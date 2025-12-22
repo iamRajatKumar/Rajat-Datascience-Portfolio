@@ -18,13 +18,13 @@ export class ProjectsComponent {
     {
       title: 'Quiz App (Microservices Architecture)',
       desc: 'An end-to-end quiz platform built using Spring Boot microservices, Eureka Registry, and Angular frontend.',
-      img: 'assets/images/project1.png',
+      img: 'assets/images/quizproject.png',
       demo: '#',
       github: '#'
     },
     {
-      title: 'Data Science Portfolio',
-      desc: 'A collection of data science projects built with Python, ML, and statistical analysis.',
+      title: 'Person Manager App (SpringBoot AWS DynamoDB)',
+      desc: 'Built using Spring Boot, this Application manages person records with AWS DynamoDB as the backend database.',
       img: 'assets/images/project1.png',
       demo: '#',
       github: '#'
