@@ -26,7 +26,8 @@ export class CertificatesComponent {
       description: 'Introduction to Generative AI, Advanced prompt engineering techniques, Solve Framework.',
       image: 'assets/certs/genAI-fundamentals.png',
       file: 'assets/certs/genAI-fundamentals.pdf',
-      downloadName: 'Generative_AI_Foundational_Certificate.pdf'
+      downloadName: 'Generative_AI_Foundational_Certificate.pdf',
+      viewUrl: 'https://example.com/campusx-certificate'
     },
     {
       title: 'AWS Cloud Practitioner',
