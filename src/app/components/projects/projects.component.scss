@@ -5,7 +5,7 @@ $accent: #38bdf8;
 $text-main: #1f2937;
 $text-muted: #4b5563;
 
-/* SECTION with background image (SVG pattern via data URI) */
+/* SECTION with background image */
 .projects-bg-test {
   position: relative;
   min-height: 70vh;
@@ -14,17 +14,14 @@ $text-muted: #4b5563;
   align-items: center;
   justify-content: center;
 
-  /* base light gradient */
   background: linear-gradient(180deg, #fbfdff 0%, #f6f9ff 100%);
-
-  /* subtle diamond pattern on top of the gradient */
   background-image: url('/assets/images/project_background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* content box so we can clearly see contrast */
+/* content box */
 .projects-bg-inner {
   position: relative;
   max-width: 960px;
@@ -53,8 +50,7 @@ $text-muted: #4b5563;
   }
 }
 
-/* header inside band */
-/* Projects Heading (white on dark background) */
+/* Projects Heading */
 .projects-header {
   position: relative;
   z-index: 2;
@@ -67,12 +63,12 @@ $text-muted: #4b5563;
     font-weight: 800;
     font-size: clamp(2.4rem, 4vw, 3.4rem);
     margin: 0;
-    color: #ffffff;  /* WHITE TEXT */
+    color: #ffffff;
   }
 
   .subtitle {
     margin-top: 0.75rem;
-    color: rgba(255, 255, 255, 0.75); /* soft white */
+    color: rgba(255, 255, 255, 0.75);
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -83,14 +79,13 @@ $text-muted: #4b5563;
   .divider {
     width: 250px;
     height: 4px;
-    background: #38bdf8;  /* your accent blue */
+    background: #38bdf8;
     border-radius: 999px;
     margin: 1rem auto 0;
   }
 }
 
-
-/* container for cards sits on a subtle translucent surface */
+/* container for cards */
 .projects-container {
   position: relative;
   z-index: 2;
@@ -99,14 +94,13 @@ $text-muted: #4b5563;
   padding: 1rem;
 }
 
-/* Glass panel that holds cards — slightly elevated & translucent */
+/* Glass panel */
 .glass-panel {
   background: rgba(255,255,255,0.94);
   border-radius: 14px;
   padding: 1.5rem;
   box-shadow: 0 26px 60px rgba(2,6,23,0.06);
   border: 1px solid rgba(15,23,42,0.05);
-  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   margin: 0 auto;
 }
@@ -121,34 +115,35 @@ $text-muted: #4b5563;
   transition: transform 220ms ease, box-shadow 220ms ease;
   display: flex;
   flex-direction: column;
-  align-items: center;           /* center all inner content */
-  min-height: 420px;             /* taller card like screenshot 2 */
+  align-items: center;
+  min-height: 420px;
 }
 
-/* hover effect */
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 28px 60px rgba(2, 6, 23, 0.14);
 }
 
-/* image container — bigger & centered */
+/* IMAGE CONTAINER (fixed size) */
 .card-img {
   width: 90%;
-  height: 220px;                 /* more height like screenshot 2 */
+  height: 220px;
   border-radius: 12px;
   overflow: hidden;
   background: #f6f8fb;
   margin-bottom: 1.2rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* image fill behavior */
+/* ✅ IMAGE FIX (NO CROPPING) */
 .card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 12px; /* optional but improves logo spacing */
 }
 
 /* title */
@@ -178,19 +173,13 @@ $text-muted: #4b5563;
   justify-content: center;
 }
 
-.card-links .link {
-  color: #38bdf8;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 /* grid layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 5px;
   padding: 25px;
-  gap: 3.5rem;                     /* reduced gap like screenshot 2 */
+  gap: 3.5rem;
 }
 
 @media (max-width: 992px) { 
@@ -203,6 +192,8 @@ $text-muted: #4b5563;
   .card-img { height: 180px; }
   .project-card { min-height: 380px; }
 }
+
+/* buttons */
 .btn-icon {
   display: inline-flex;
   align-items: center;
