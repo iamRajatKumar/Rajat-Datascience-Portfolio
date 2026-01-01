@@ -25,7 +25,7 @@ export class ProjectsComponent {
     {
       title: 'Person Manager App (SpringBoot AWS DynamoDB)',
       desc: 'Built using Spring Boot, this Application manages person records with AWS DynamoDB as the backend database.',
-      img: 'assets/images/project1.png',
+      img: 'assets/images/PersonManagerApp.png',
       demo: '#',
       github: '#'
     },
