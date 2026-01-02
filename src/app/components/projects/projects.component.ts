@@ -30,9 +30,9 @@ export class ProjectsComponent {
       github: '#'
     },
     {
-      title: 'AI Stock Market Predictor',
-      desc: 'A Machine Learning model that predicts stock movements using historical trends and sentiment analysis.',
-      img: 'assets/images/project2.png',
+      title: 'Expense Calculator App',
+      desc: 'A Expense Calculator App developed in Smalltalk programming language based on Pure OOPs concept.',
+      img: 'assets/images/ExpenseCalculator.png',
       demo: '#',
       github: '#'
     },
