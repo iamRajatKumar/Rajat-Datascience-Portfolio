@@ -37,16 +37,16 @@ export class ProjectsComponent {
       github: '#'
     },
     {
-      title: 'Quiz App (Microservices Architecture)',
-      desc: 'An end-to-end quiz platform built using Spring Boot microservices, Eureka Registry, and Angular frontend.',
-      img: 'assets/images/project1.png',
+      title: 'Portfolio Website',
+      desc: 'While working as a Fullstack developer I have created this website for my personal use.',
+      img: 'assets/images/PortfolioImg.png',
       demo: '#',
       github: '#'
     },
     {
-      title: 'Data Science Portfolio',
-      desc: 'A collection of data science projects built with Python, ML, and statistical analysis.',
-      img: 'assets/images/project1.png',
+      title: 'Todo App',
+      desc: 'Developed a Todo Application using Angular for frontend and Node.js with SpringBoot for backend.',
+      img: 'assets/images/TodoList.jpg',
       demo: '#',
       github: '#'
     }
