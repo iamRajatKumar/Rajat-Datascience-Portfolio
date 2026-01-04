@@ -51,7 +51,7 @@ export class CertificatesComponent {
     },
     {
       title: 'Agile Fundamentals',
-      provider: 'Coursera / Other',
+      provider: 'Wipro',
       date: '2023',
       description: 'Course on Agile principles, Scrum, and teamwork best practices.',
       image: 'assets/certs/agile-fundamentals.png',
