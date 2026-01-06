@@ -8,6 +8,7 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CertificatesComponent } from './components/certificates/certificates.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
 
 
 
@@ -18,7 +19,8 @@ import { CertificatesComponent } from './components/certificates/certificates.co
     IntroductionComponent,
     AboutComponent,
     ProjectsComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
