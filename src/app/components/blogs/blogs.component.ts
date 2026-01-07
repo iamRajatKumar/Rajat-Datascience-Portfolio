@@ -10,10 +10,10 @@ export class BlogsComponent {
 
   blogs = [
     {
-      title: 'My Journey from Full-Stack Developer to Data Science',
-      desc: 'How I transitioned from building web applications to working with data, ML, and analytics.',
+      title: 'AI Tools Are Transforming How We Work — But Are They Also Making Us Less Creative?',
+      desc: 'An exploration of the impact of AI tools on creativity in various professions, Making us Less Creative',
       platform: 'Medium',
-      link: 'https://medium.com/@YOUR_MEDIUM_USERNAME/journey-fullstack-to-data-science'
+      link: 'https://medium.com/@Iamrajatkumar/ai-tools-are-transforming-how-we-work-but-are-they-also-making-us-less-creative-a60b55830b28'
     },
     {
       title: 'Understanding Machine Learning Basics with Python',
