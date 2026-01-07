@@ -1,1 +1,34 @@
-<p style="color:#fff">blogs works!</p>
+<section class="blogs-section" id="blogs">
+  <div class="blogs-container">
+
+    <!-- Header -->
+    <header class="blogs-header">
+      <h1>Blogs</h1>
+      <p class="subtitle">
+        I write about data science, machine learning, and full-stack development.
+      </p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- Blogs Grid -->
+    <div class="blogs-grid">
+      <article class="blog-card" *ngFor="let blog of blogs">
+        <h3>{{ blog.title }}</h3>
+        <p class="desc">{{ blog.desc }}</p>
+
+        <div class="blog-footer">
+          <span class="platform">{{ blog.platform }}</span>
+          <a
+            class="read-btn"
+            [href]="blog.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read Article →
+          </a>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
