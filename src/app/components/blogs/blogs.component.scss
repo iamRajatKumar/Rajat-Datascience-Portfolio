@@ -2,12 +2,14 @@
 
 $accent: #38bdf8;
 $text-main: #1f2937;
-$text-muted: #6b7280;
+$text-muted: #4b5563;
 $bg-light: #ffffff;
 
 .blogs-section {
-  background: $bg-light;
+  position: relative;
+  background: #ffffff;   /* FORCE white background */
   padding: 4rem 1.5rem;
+  z-index: 3;            /* Above particles */
 }
 
 .blogs-container {
