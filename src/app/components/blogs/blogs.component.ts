@@ -13,6 +13,7 @@ export class BlogsComponent {
       title: 'AI Tools Are Transforming How We Work — But Are They Also Making Us Less Creative?',
       desc: 'An exploration of the impact of AI tools on creativity in various professions, Making us Less Creative',
       platform: 'Medium',
+      image: 'assets/blogs/AIblogimg.png',
       link: 'https://medium.com/@Iamrajatkumar/ai-tools-are-transforming-how-we-work-but-are-they-also-making-us-less-creative-a60b55830b28'
     },
     {
