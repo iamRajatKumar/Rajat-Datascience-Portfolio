@@ -4,6 +4,7 @@ $accent: #0b74de;
 $text: #222;
 $muted: #6b7280;
 $shadow: rgba(11, 20, 34, 0.06);
+$nav: #1a0bf4;
 
 .site-header {
   position: sticky;
@@ -75,7 +76,7 @@ $shadow: rgba(11, 20, 34, 0.06);
         transition: color .12s ease, background .12s ease;
 
         &:hover, &:focus {
-          color: $text;
+          color: $nav;
           background: rgba(11,20,34,0.03);
         }
 
