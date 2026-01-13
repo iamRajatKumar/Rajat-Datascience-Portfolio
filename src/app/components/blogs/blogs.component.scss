@@ -51,8 +51,8 @@ $bg-light: #ffffff;
 /* Grid */
 .blogs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
@@ -95,9 +95,11 @@ $bg-light: #ffffff;
 }
 
 .blog-img {
-  height: 180px;
+  height: 260px;     /* bigger image */
+  object-fit: cover;
   background: #f3f4f6;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 /* Footer */
