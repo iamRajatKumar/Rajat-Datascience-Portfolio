@@ -63,6 +63,12 @@ $bg-light: #ffffff;
   }
 }
 
+@media (max-width: 768px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Blog Card */
 .blog-card {
   background: #ffffff;
