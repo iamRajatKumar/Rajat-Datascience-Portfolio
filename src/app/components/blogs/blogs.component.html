@@ -16,19 +16,14 @@
         <h3>{{ blog.title }}</h3>
 
         <div class="blog-img">
-          <img [src]="blog.image" [alt]="blog.title" />
+          <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
         </div>
-        
+
         <p class="desc">{{ blog.desc }}</p>
 
         <div class="blog-footer">
           <span class="platform">{{ blog.platform }}</span>
-          <a
-            class="read-btn"
-            [href]="blog.link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="read-btn" [href]="blog.link" target="_blank" rel="noopener noreferrer">
             Read Article →
           </a>
         </div>
